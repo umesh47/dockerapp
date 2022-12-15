@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: /dockerapp
     docker:
-      - image: docker:17.05.0-ce-git
+      - image: docker:23.0.0-beta.1-git
     steps:
       - checkout
       - setup_remote_docker
