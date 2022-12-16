@@ -24,7 +24,7 @@ jobs:
             docker-compose up -d 
             docker ps
             echo "${DOCKER_HUB_PWD}" | docker login --username "${DOCKER_HUB_USER_ID}" --password-stdin
-            docker tag dockerapp_dockerapp $DOCKER_HUB_USER_ID/dockerapp:$CIRCLE_SHA1
-            docker tag dockerapp_dockerapp $DOCKER_HUB_USER_ID/dockerapp:latest
+            docker tag dockerapp-dockerapp $DOCKER_HUB_USER_ID/dockerapp:$CIRCLE_SHA1
+            docker tag dockerapp-dockerapp $DOCKER_HUB_USER_ID/dockerapp:latest
             docker push $DOCKER_HUB_USER_ID/dockerapp:$CIRCLE_SHA1
             docker push $DOCKER_HUB_USER_ID/dockerapp:latest
